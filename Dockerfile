@@ -11,6 +11,8 @@ RUN apk add --no-cache curl ca-certificates tar \
 
 FROM mcr.microsoft.com/dotnet/runtime-deps:5.0
 
+LABEL org.opencontainers.image.source https://github.com/Nothing4You/ombi-docker
+
 COPY --from=builder --chown=0:0 /ombi /ombi
 COPY --from=builder --chown=0:0 /storage /storage
 
