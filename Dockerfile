@@ -1,4 +1,4 @@
-ARG OMBI_PACKAGE=https://github.com/Ombi-app/Ombi/releases/download/v4.0.1336/linux-x64.tar.gz
+ARG OMBI_PACKAGE=https://github.com/Ombi-app/Ombi/releases/download/v4.0.1338/linux-x64.tar.gz
 
 FROM alpine:3.13.2 AS builder
 
