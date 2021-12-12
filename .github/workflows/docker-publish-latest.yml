@@ -44,5 +44,5 @@ jobs:
 
           docker tag $IMAGE_NAME $IMAGE_ID:$OMBI_PACKAGE
           docker tag $IMAGE_NAME $IMAGE_ID:latest
-          docker push $IMAGE_ID:$IMAGE_ID:$OMBI_PACKAGE
+          docker push $IMAGE_ID:$OMBI_PACKAGE
           docker push $IMAGE_ID:latest
