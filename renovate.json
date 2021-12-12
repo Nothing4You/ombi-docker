@@ -16,8 +16,10 @@
   "regexManagers": [
     {
       "fileMatch": ["^Dockerfile$"],
-      "matchStrings": ["^ARG OMBI_PACKAGE=(?<currentValue>[^\n]?)\n"],
-      "depName": "Ombi-app/Ombi",
+      "matchStrings": [
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)\\sENV .*?_VERSION=(?<currentValue>.*)\\s"
+      ],
+      "depNameTemplate": "Ombi-app/Ombi",
       "datasourceTemplate": "github-tags"
     }
   ]
