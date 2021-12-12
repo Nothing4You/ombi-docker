@@ -1,4 +1,4 @@
-FROM curlimages/curl:7.80.0 AS builder
+FROM curlimages/curl:7.80.0@sha256:d588ff348c251f8e4d1b2053125c34d719a98ff3ef20895c49684b3743995073 AS builder
 
 # renovate: datasource=github-tags depName=Ombi-app/Ombi
 ENV OMBI_VERSION=v4.0.1446
@@ -7,7 +7,7 @@ RUN curl -L -o /home/curl_user/ombi.tar.gz "https://github.com/Ombi-app/Ombi/rel
 && mkdir /home/curl_user/ombi /home/curl_user/storage \
 && tar xvf /home/curl_user/ombi.tar.gz -C /home/curl_user/ombi/
 
-FROM mcr.microsoft.com/dotnet/runtime-deps:5.0
+FROM mcr.microsoft.com/dotnet/runtime-deps:5.0@sha256:64ba9b212322e5c3181f60df67548590e4120f60eb7eba0bed6771413e1aa498
 
 LABEL org.opencontainers.image.source https://github.com/Nothing4You/ombi-docker
 
