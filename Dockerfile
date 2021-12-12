@@ -1,7 +1,7 @@
 FROM curlimages/curl:7.80.0 AS builder
 
 # renovate: datasource=github-tags depName=Ombi-app/Ombi
-ENV OMBI_VERSION=v4.0.1446
+ENV OMBI_VERSION=v4.0.1511
 
 RUN curl -L -o /home/curl_user/ombi.tar.gz "https://github.com/Ombi-app/Ombi/releases/download/${OMBI_VERSION}/linux-x64.tar.gz" \
 && mkdir /home/curl_user/ombi /home/curl_user/storage \
