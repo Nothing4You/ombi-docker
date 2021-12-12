@@ -1,0 +1,20 @@
+name: Docker
+
+on:
+  pull_request:
+
+env:
+  IMAGE_NAME: ombi
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # renovate: tag=v2
+
+      - name: Identify version to build
+        run: egrep "^ENV OMBI_VERSION=" Dockerfile | sed "s|^ENV ||" >> $GITHUB_ENV
+
+      - name: Build image
+        run: docker build . --file Dockerfile --tag $IMAGE_NAME --cache-from ghcr.io/${{ github.repository }}/$IMAGE_NAME:latest
