@@ -1,7 +1,7 @@
 # simple container that can be used without launching the container as root
 
 `latest` tag is based on the `master` branch of this repository.
-Versions are tagged matching the versions tagged in the upstream repository at https://github.com/tidusjar/Ombi.
+Versions are tagged matching the versions tagged in the upstream repository at https://github.com/Ombi-app/Ombi.
 Git tags match docker tags.
 
 Images can be pulled from `ghcr.io/nothing4you/ombi-docker/ombi`.
