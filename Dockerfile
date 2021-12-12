@@ -1,6 +1,6 @@
 ARG OMBI_PACKAGE=https://github.com/Ombi-app/Ombi/releases/download/v4.0.1446/linux-x64.tar.gz
 
-FROM alpine:3.13.2 AS builder
+FROM alpine:3.15.0 AS builder
 
 ARG OMBI_PACKAGE
 
