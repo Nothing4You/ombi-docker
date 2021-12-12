@@ -1,8 +1,9 @@
 FROM curlimages/curl:7.80.0 AS builder
 
-ENV OMBI_PACKAGE=v4.0.1446
+# renovate: datasource=github-tags depName=Ombi-app/Ombi
+ENV OMBI_VERSION=v4.0.1446
 
-RUN curl -L -o /home/curl_user/ombi.tar.gz "https://github.com/Ombi-app/Ombi/releases/download/${OMBI_PACKAGE}/linux-x64.tar.gz" \
+RUN curl -L -o /home/curl_user/ombi.tar.gz "https://github.com/Ombi-app/Ombi/releases/download/${OMBI_VERSION}/linux-x64.tar.gz" \
 && mkdir /home/curl_user/ombi /home/curl_user/storage \
 && tar xvf /home/curl_user/ombi.tar.gz -C /home/curl_user/ombi/
 

@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Identify version to build
-        run: egrep "^ENV OMBI_PACKAGE=" Dockerfile | sed "s|^ENV ||" >> $GITHUB_ENV
+        run: egrep "^ENV OMBI_VERSION=" Dockerfile | sed "s|^ENV ||" >> $GITHUB_ENV
 
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME --cache-from ghcr.io/${{ github.repository }}/$IMAGE_NAME:latest
@@ -40,9 +40,9 @@ jobs:
 
           # Use Docker `latest` tag convention
           echo IMAGE_ID=$IMAGE_ID
-          echo OMBI_PACKAGE="$OMBI_PACKAGE"
+          echo OMBI_VERSION="$OMBI_VERSION"
 
-          docker tag $IMAGE_NAME $IMAGE_ID:$OMBI_PACKAGE
+          docker tag $IMAGE_NAME $IMAGE_ID:$OMBI_VERSION
           docker tag $IMAGE_NAME $IMAGE_ID:latest
-          docker push $IMAGE_ID:$OMBI_PACKAGE
+          docker push $IMAGE_ID:$OMBI_VERSION
           docker push $IMAGE_ID:latest
