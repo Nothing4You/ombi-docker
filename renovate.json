@@ -3,6 +3,7 @@
     "config:base",
     ":disableDependencyDashboard"
   ],
+  "prHourlyLimit": 0,
   "separateMinorPatch": true,
   "stabilityDays": 3,
   "pinDigests": true,
