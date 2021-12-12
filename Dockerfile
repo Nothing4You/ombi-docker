@@ -1,10 +1,8 @@
-ARG OMBI_PACKAGE=https://github.com/Ombi-app/Ombi/releases/download/v4.0.1446/linux-x64.tar.gz
-
 FROM curlimages/curl:7.80.0 AS builder
 
-ARG OMBI_PACKAGE
+ENV OMBI_PACKAGE=v4.0.1446
 
-RUN curl -L -o /home/curl_user/ombi.tar.gz "${OMBI_PACKAGE}" \
+RUN curl -L -o /home/curl_user/ombi.tar.gz "https://github.com/Ombi-app/Ombi/releases/download/${OMBI_PACKAGE}/linux-x64.tar.gz" \
 && mkdir /home/curl_user/ombi /home/curl_user/storage \
 && tar xvf /home/curl_user/ombi.tar.gz -C /home/curl_user/ombi/
 

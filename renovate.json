@@ -1,5 +1,23 @@
 {
   "extends": [
     "config:base"
+  ],
+  "separateMinorPatch": true,
+  "stabilityDays": 3,
+  "pinDigests": true,
+  "packageRules": [
+    {
+      "description": "Schedule digest updates daily",
+      "matchUpdateTypes": ["digest"],
+      "extends": ["schedule:daily"]
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["^ARG OMBI_PACKAGE=(?<currentValue>[^\n]?)\n"],
+      "depName": "Ombi-app/Ombi",
+      "datasourceTemplate": "github-tags"
+    }
   ]
 }
