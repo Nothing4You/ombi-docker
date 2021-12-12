@@ -11,7 +11,14 @@
     {
       "description": "Schedule digest updates daily",
       "matchUpdateTypes": ["digest"],
-      "extends": ["schedule:daily"]
+      "extends": ["schedule:daily"],
+      "automerge": true
+    },
+    {
+      "matchPackageNames": ["Ombi-app/Ombi"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "extends": ["schedule:daily"],
+      "automerge": true
     }
   ],
   "regexManagers": [
