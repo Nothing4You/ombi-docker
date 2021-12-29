@@ -18,7 +18,8 @@
       "matchPackageNames": ["Ombi-app/Ombi"],
       "matchUpdateTypes": ["minor", "patch"],
       "extends": ["schedule:daily"],
-      "automerge": true
+      "automerge": true,
+      "ignoreUnstable": false
     }
   ],
   "regexManagers": [
