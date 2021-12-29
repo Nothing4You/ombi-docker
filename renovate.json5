@@ -16,7 +16,6 @@
     },
     {
       "matchPackageNames": ["Ombi-app/Ombi"],
-      "matchUpdateTypes": ["minor", "patch"],
       "extends": ["schedule:daily"],
       "automerge": true,
       "ignoreUnstable": false
