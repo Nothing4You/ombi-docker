@@ -11,12 +11,12 @@
     {
       "description": "Schedule digest updates daily",
       "matchUpdateTypes": ["digest"],
-      "extends": ["schedule:daily"],
+      "schedule": ["every 1 days"],
       "automerge": true
     },
     {
       "matchPackageNames": ["Ombi-app/Ombi"],
-      "extends": ["schedule:daily"],
+      "schedule": ["every 1 days"],
       "automerge": true,
       "ignoreUnstable": false
     }
