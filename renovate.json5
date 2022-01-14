@@ -16,7 +16,7 @@
     },
     {
       "matchPackageNames": ["Ombi-app/Ombi"],
-      "schedule": ["every 1 hours"],
+      "schedule": ["every 1 days"],
       "automerge": true,
       "ignoreUnstable": false,
       "stabilityDays": 0
