@@ -18,7 +18,8 @@
       "matchPackageNames": ["Ombi-app/Ombi"],
       "schedule": ["every 1 days"],
       "automerge": true,
-      "ignoreUnstable": false
+      "ignoreUnstable": false,
+      "stabilityDays": 0
     }
   ],
   "regexManagers": [
