@@ -1,4 +1,4 @@
-FROM curlimages/curl:7.81.0@sha256:faaba66e89c87fd3fb51336857142ee6ce78fa8d8f023a5713d2bf4957f1aca8 AS builder
+FROM curlimages/curl:7.82.0@sha256:c1c1cda72ab8c306390fc05518bf4d42148564978326d078f65d546858d139cb AS builder
 
 # renovate: datasource=github-releases depName=Ombi-app/Ombi
 ENV OMBI_VERSION=v4.16.2
