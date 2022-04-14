@@ -11,7 +11,7 @@
     {
       "description": "Don't pin official action digests",
       "matchPackagePrefixes": ["actions/"],
-      "pinDigests": true
+      "pinDigests": false
     },
     {
       "description": "Schedule digest updates daily",
