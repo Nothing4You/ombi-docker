@@ -1,7 +1,7 @@
 FROM curlimages/curl:8.00.1@sha256:9e886c104cae1072f7874c9c214f77c6758f2e8a477234e32eda5fcbfa41f225 AS builder
 
 # renovate: datasource=github-releases depName=Ombi-app/Ombi
-ENV OMBI_VERSION=v4.36.1
+ENV OMBI_VERSION=v4.37.0
 
 RUN curl -L -o /home/curl_user/ombi.tar.gz "https://github.com/Ombi-app/Ombi/releases/download/${OMBI_VERSION}/linux-x64.tar.gz" \
 && mkdir /home/curl_user/ombi /home/curl_user/storage \
