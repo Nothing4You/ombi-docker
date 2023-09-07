@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Identify version to build
         run: egrep "^ENV OMBI_VERSION=" Dockerfile | sed "s|^ENV ||" >> $GITHUB_ENV
