@@ -7,7 +7,7 @@ RUN curl -L -o /home/curl_user/ombi.tar.gz "https://github.com/Ombi-app/Ombi/rel
 && mkdir /home/curl_user/ombi /home/curl_user/storage \
 && tar xvf /home/curl_user/ombi.tar.gz -C /home/curl_user/ombi/
 
-FROM mcr.microsoft.com/dotnet/runtime-deps:7.0@sha256:6de54b4a25eac7099f4ea313ae6d5f902175b46c7f4d36a3028aa9d09ee6d2ec
+FROM mcr.microsoft.com/dotnet/runtime-deps:7.0@sha256:5e5fa599a94aa09126a518643cbb359ae4d4e536775f1f418e46fa653c486349
 
 LABEL org.opencontainers.image.source https://github.com/Nothing4You/ombi-docker
 
